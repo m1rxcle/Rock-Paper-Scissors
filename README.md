@@ -1,8 +1,3 @@
-# React + Vite
+## Камень-Ножницы-Бумага
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Простая веб-игра** "Камень-Ножницы-Бумага", созданная с использованием React.js. Игроки могут выбирать между камнем, ножницами и бумагой, после чего программа определит победителя согласно правилам классической игры: камень побеждает ножницы, ножницы побеждают бумагу, а бумага побеждает камень.
