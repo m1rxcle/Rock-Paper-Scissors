@@ -1,7 +1,9 @@
+import styles from "./header.module.css"
+
 const Header = () => {
 	return (
-		<section className="p-[10px] text-center w-full">
-			<header className="mb-[100px] text-center font-bold text-[30px] md:text-[40px]">
+		<section className={styles.container}>
+			<header className={styles.header_title}>
 				<h1>Камень ножницы бумага</h1>
 			</header>
 		</section>

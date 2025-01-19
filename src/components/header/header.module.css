@@ -1,0 +1,8 @@
+@layer header {
+	.container {
+		@apply p-[10px] text-center w-full;
+	}
+	.header_title {
+		@apply mb-[100px] text-center font-bold text-[30px] md:text-[40px];
+	}
+}
