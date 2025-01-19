@@ -4,7 +4,7 @@ import { gameOptions } from "../utils"
 import Button from "./button"
 import { choseWinner } from "../lib/choseWinner"
 
-const Main = () => {
+const Game = () => {
 	const [playerChoice, setPlayerChoice] = useState(gameOptions[0])
 	const [compChoice, setCompChoice] = useState(gameOptions[0])
 	const [isLoading, setIsLoading] = useState(false)
@@ -122,4 +122,4 @@ const Main = () => {
 		</main>
 	)
 }
-export default Main
+export default Game

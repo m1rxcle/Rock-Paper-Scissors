@@ -1,11 +1,11 @@
 import Header from "./components/header"
-import Main from "./components/main"
+import Game from "./components/game"
 
 function App() {
 	return (
-		<section className="bg-[#d5d8ba] min-h-screen">
+		<section className="bg-[#d5d8ba] min-h-screen overflow-hidden">
 			<Header />
-			<Main />
+			<Game />
 		</section>
 	)
 }
