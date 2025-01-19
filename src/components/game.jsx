@@ -95,7 +95,7 @@ const Game = () => {
 					onClick={() => handleClickChoice(gameOptions[0])}
 					className={`${
 						isLoading
-							? "pointer-events-none bg-gray-400 p-[20px] rounded-[10px] cursor-pointer text-[20px] w-[200px] border-2 border-black"
+							? "pointer-events-none bg-gray-400 p-[20px] rounded-[10px] cursor-pointer text-[15px] md:text-[20px] w-[30%] md:w-[200px] border-2 border-black"
 							: "bg-[#b1242496] p-[20px] rounded-[10px] cursor-pointer text-[15px] md:text-[20px] w-[30%] md:w-[200px] border-2 border-black active:translate-y-[2px] shadow-gray-600 shadow-md"
 					} `}
 					text={"Камень"}
@@ -104,7 +104,7 @@ const Game = () => {
 					onClick={() => handleClickChoice(gameOptions[1])}
 					className={`${
 						isLoading
-							? "pointer-events-none bg-gray-400 p-[20px] rounded-[10px] cursor-pointer text-[20px] w-[200px] border-2 border-black"
+							? "pointer-events-none bg-gray-400 p-[20px] rounded-[10px] cursor-pointer text-[15px] md:text-[20px] w-[30%] md:w-[200px] border-2 border-black"
 							: "bg-[#24b14e96] p-[20px] rounded-[10px] cursor-pointer text-[15px] md:text-[20px] w-[30%] md:w-[200px] border-2 border-black active:translate-y-[2px] shadow-gray-600 shadow-md"
 					}`}
 					text={"Ножницы"}
@@ -113,7 +113,7 @@ const Game = () => {
 					onClick={() => handleClickChoice(gameOptions[2])}
 					className={`${
 						isLoading
-							? "pointer-events-none bg-gray-400 p-[20px] rounded-[10px] cursor-pointer text-[20px] w-[200px] border-2 border-black"
+							? "pointer-events-none bg-gray-400 p-[20px] rounded-[10px] cursor-pointer text-[15px] md:text-[20px] w-[30%] md:w-[200px] border-2 border-black"
 							: "bg-[#2479b196] p-[20px] rounded-[10px] cursor-pointer text-[15px] md:text-[20px] w-[30%] md:w-[200px] border-2 border-black active:translate-y-[2px] shadow-gray-600 shadow-md"
 					}`}
 					text={"Бумага"}
