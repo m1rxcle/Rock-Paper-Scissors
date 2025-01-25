@@ -1,4 +1,15 @@
-export const choseWinner = (isLoading, playerChoice, compChoice, setPlayerScore, setCompScore, setMessage, playerScore, compScore) => {
+import React from "react"
+
+export const choseWinner = (
+	playerScore: number,
+	compScore: number,
+	isLoading: boolean,
+	playerChoice: string,
+	compChoice: string,
+	setMessage: React.Dispatch<React.SetStateAction<string>>,
+	setPlayerScore: React.Dispatch<React.SetStateAction<number>>,
+	setCompScore: React.Dispatch<React.SetStateAction<number>>
+) => {
 	const differentScore = Math.abs(playerScore - compScore)
 	if (!isLoading && playerChoice && compChoice) {
 		if (playerChoice === compChoice) {

@@ -1,13 +1,8 @@
 import { useEffect, useState } from "react"
 
 import Button from "../button/button"
-
-import { paper_left, paper_right, rock_left, rock_right, scissors_left, scissors_right } from "../../utils"
-import { gameOptions } from "../../utils"
-
-import { choseWinner } from "../../lib/choseWinner"
-
-import styles from "./game.module.css"
+import { gameOptions, paper_left, paper_right, rock_left, rock_right, scissors_left, scissors_right } from "../../utils"
+import { choseWinner } from "../../lib/chooseWinner"
 
 const Game = () => {
 	const [playerChoice, setPlayerChoice] = useState(gameOptions[0])
@@ -18,7 +13,7 @@ const Game = () => {
 	const [playerScore, setPlayerScore] = useState(0)
 	const [compScore, setCompScore] = useState(0)
 
-	const handleClickChoice = (choice) => {
+	const handleClickChoice = (choice: string) => {
 		const compRandomChoose = Math.floor(Math.random() * 3)
 		setCompChoice(gameOptions[compRandomChoose])
 
@@ -45,19 +40,19 @@ const Game = () => {
 	}, [isLoading])
 
 	useEffect(() => {
-		choseWinner(isLoading, playerChoice, compChoice, setPlayerScore, setCompScore, setMessage, playerScore, compScore)
+		choseWinner(playerScore, compScore, isLoading, playerChoice, compChoice, setMessage, setPlayerScore, setCompScore)
 	}, [isLoading])
 
 	return (
 		<main>
-			{!isLoading ? <div className={styles.message_text}>{message}</div> : ""}
-			<div className={styles.game_players_container}>
+			{!isLoading ? <div className="message_text">{message}</div> : ""}
+			<div className="game_players_container">
 				<h1>Игрок</h1>
 
 				<h1>Компьютер</h1>
 			</div>
-			<div className={styles.game_images_container}>
-				<div className={styles.game_img_position}>
+			<div className="game_images_container">
+				<div className="game_img_position">
 					<img
 						src={
 							isLoading
@@ -70,7 +65,7 @@ const Game = () => {
 								? paper_left
 								: ""
 						}
-						className={isLoading ? `animate-bounce ${styles.game_img_size}` : styles.game_img_size}
+						className={isLoading ? `animate-bounce game_img_size` : "game_img_size"}
 					/>
 				</div>
 				<div>
@@ -78,7 +73,7 @@ const Game = () => {
 						{isLoading ? remainingTime : `${playerScore}:${compScore}`}
 					</span>
 				</div>
-				<div className={styles.game_img_position}>
+				<div className="game_img_position">
 					<img
 						src={
 							isLoading
@@ -91,11 +86,11 @@ const Game = () => {
 								? paper_right
 								: ""
 						}
-						className={isLoading ? `animate-bounce ${styles.game_img_size}` : styles.game_img_size}
+						className={isLoading ? `animate-bounce game_img_size` : "game_img_size"}
 					/>
 				</div>
 			</div>
-			<div className={styles.game_buttons_container}>
+			<div className="game_buttons_container">
 				{gameOptions.map((option, i) => (
 					<Button
 						key={i}
