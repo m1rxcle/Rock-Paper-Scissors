@@ -97,7 +97,7 @@ const Game = () => {
 						onClick={() => handleClickChoice(option)}
 						className={
 							isLoading
-								? "pointer-events-none bg-gray-400 p-[20px] rounded-[10px] cursor-pointer text-[15px] md:text-[20px] w-[30%] md:w-[200px] border-2 border-black"
+								? "pointer-events-none bg-gray-400 p-[20px] rounded-[10px] cursor-pointer text-xs md:text-base w-[30%] md:w-[200px] border-2 border-black"
 								: `${i === 0 ? "bg-[#b1242496]" : i === 1 ? "bg-[#24b14e96]" : "bg-[#2479b196]"}
 								   p-[20px] rounded-[10px] cursor-pointer text-xs md:text-base w-[30%] md:w-[200px] border-2 border-black active:translate-y-[2px] shadow-gray-600 shadow-md`
 						}
