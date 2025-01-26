@@ -69,7 +69,7 @@ const Game = () => {
 					/>
 				</div>
 				<div>
-					<span className={isLoading ? "text-red-500 font-bold text-[30px]" : "font-bold text-[30px]"}>
+					<span className={isLoading ? "text-red-500 font-bold text-[30px]" : "font-bold  text-[30px]"}>
 						{isLoading ? remainingTime : `${playerScore}:${compScore}`}
 					</span>
 				</div>
